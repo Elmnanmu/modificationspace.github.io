@@ -1,9 +1,23 @@
-/* 全局样式 */
-body {
-    font-family: Arial, sans-serif;
+/* 基础重置 */
+* {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Arial, sans-serif;
+  }
+  
+  body {
     line-height: 1.6;
-}
+    background: #f8f9fa;
+    color: #333;
+  }
+  
+  /* 容器统一宽度 */
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
 
 /* 导航栏 */
 header {
@@ -13,20 +27,28 @@ header {
     text-align: center;
 }
 
-nav ul {
-    padding: 0;
+
+nav {
+    background: #333;
+    padding: 1rem;
+  }
+  
+  nav ul {
     list-style: none;
-}
-
-nav ul li {
-    display: inline-block;
-    margin: 0 10px;
-}
-
-nav a {
+    padding: 0;
+    display: flex;
+    gap: 2rem;
+  }
+  
+  nav a {
     color: white;
     text-decoration: none;
-}
+  }
+  
+  nav a:hover {
+    color: #ffd700;
+  }
+  
 
 /* 主要内容区域 */
 main {
@@ -45,3 +67,18 @@ footer {
     bottom: 0;
     width: 100%;
 }
+  /* 卡片悬停动画 */
+.member-card {
+    transition: transform 0.3s;
+  }
+  .member-card:hover {
+    transform: translateY(-5px);
+  }
+  .team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+  :root {
+    --primary-color: #4a90e2;
+    --secondary-color: #6c5ce7;
+  }
